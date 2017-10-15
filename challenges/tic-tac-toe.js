@@ -30,11 +30,7 @@ function toggleActivePlayer () {
 
 // COMMENT 4
 function claimCell (cellId) {
-  if (activePlayer === 'X') {
-    cellRegistry.X.push(cellId)
-  } else {
-    cellRegistry.O.push(cellId)
-  }
+  cellRegistry[activePlayer].push(cellId)
 }
 
 // COMMENT 5
