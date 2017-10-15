@@ -3,14 +3,14 @@
 // The first cell is the top left, it would be 1, the top right would be the 3rd,
 // and the bottom right is the final one, number 9. 
 
-// COMMENT 1
+// ** Game Vars **
 var activePlayer = 'X'
 var cellRegistry = {}
 cellRegistry.X = []
 cellRegistry.O = []
 
 
-// COMMENT 2
+// ** Game Functions **
 function endTurn (cellId) {
   claimCell(cellId)
   if(victoryOccurred()) {
@@ -19,7 +19,6 @@ function endTurn (cellId) {
   toggleActivePlayer()
 }
 
-// COMMENT 3
 function toggleActivePlayer () {
   if (activePlayer === 'X') {
     activePlayer = 'O'
@@ -28,7 +27,6 @@ function toggleActivePlayer () {
   }
 }
 
-// COMMENT 4
 function claimCell (cellId) {
   if (activePlayer === 'X') {
     cellRegistry.X.push(cellId)
@@ -37,7 +35,6 @@ function claimCell (cellId) {
   }
 }
 
-// COMMENT 5
 function victoryOccurred () {
   var solutionFound = false
 
@@ -75,14 +72,13 @@ function checkArrayForNums (num1, num2, num3) {
 }
 
 
-// COMMENT 6
+// ** Game Setup **
 function init () {
   activePlayer = 'X'
   cellRegistry.X = []
   cellRegistry.O = []
 }
 
-// COMMENT 7
 init()
 
 // simulated plays, this replaces an actual GUI where event handlers on the
