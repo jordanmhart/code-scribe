@@ -70,17 +70,6 @@ function checkArrayForNums (num1, num2, num3) {
   }
 }
 
-
-// COMMENT 6
-function init () {
-  activePlayer = 'X'
-  cellRegistry.X = []
-  cellRegistry.O = []
-}
-
-// COMMENT 7
-init()
-
 // simulated plays, this replaces an actual GUI where event handlers on the
 // UI elements would trigger endTurn with the number of the cell that had been clicked
 endTurn(4) // x plays first
